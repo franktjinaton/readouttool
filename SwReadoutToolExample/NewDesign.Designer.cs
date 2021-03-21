@@ -72,6 +72,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbBattery = new System.Windows.Forms.Panel();
+            this.lblDeltaVolt = new System.Windows.Forms.Label();
             this.lblBatt10 = new System.Windows.Forms.Label();
             this.lblBatt9 = new System.Windows.Forms.Label();
             this.lblBatt7 = new System.Windows.Forms.Label();
@@ -84,7 +85,6 @@
             this.gbStat = new System.Windows.Forms.Panel();
             this.btnReadRegisters = new System.Windows.Forms.Button();
             this.btnSetClock = new System.Windows.Forms.Button();
-            this.lblDeltaVolt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -126,10 +126,10 @@
             // 
             this.lblBatt1.AutoSize = true;
             this.lblBatt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.lblBatt1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBatt1.Location = new System.Drawing.Point(88, 245);
+            this.lblBatt1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBatt1.Location = new System.Drawing.Point(60, 245);
             this.lblBatt1.Name = "lblBatt1";
-            this.lblBatt1.Size = new System.Drawing.Size(23, 25);
+            this.lblBatt1.Size = new System.Drawing.Size(17, 18);
             this.lblBatt1.TabIndex = 3;
             this.lblBatt1.Text = "0";
             this.lblBatt1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -483,7 +483,7 @@
             this.btnReadClock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReadClock.FlatAppearance.BorderSize = 0;
             this.btnReadClock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReadClock.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReadClock.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReadClock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnReadClock.Location = new System.Drawing.Point(238, 602);
             this.btnReadClock.Name = "btnReadClock";
@@ -501,7 +501,7 @@
             this.btnReadLogging.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReadLogging.FlatAppearance.BorderSize = 0;
             this.btnReadLogging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReadLogging.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReadLogging.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReadLogging.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnReadLogging.Location = new System.Drawing.Point(34, 602);
             this.btnReadLogging.Name = "btnReadLogging";
@@ -646,14 +646,27 @@
             this.gbBattery.Size = new System.Drawing.Size(614, 521);
             this.gbBattery.TabIndex = 55;
             // 
+            // lblDeltaVolt
+            // 
+            this.lblDeltaVolt.AutoSize = true;
+            this.lblDeltaVolt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.lblDeltaVolt.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeltaVolt.Location = new System.Drawing.Point(335, 35);
+            this.lblDeltaVolt.Name = "lblDeltaVolt";
+            this.lblDeltaVolt.Size = new System.Drawing.Size(193, 28);
+            this.lblDeltaVolt.TabIndex = 59;
+            this.lblDeltaVolt.Text = "Delta Voltage: 0 V";
+            this.lblDeltaVolt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDeltaVolt.Click += new System.EventHandler(this.label2_Click_1);
+            // 
             // lblBatt10
             // 
             this.lblBatt10.AutoSize = true;
             this.lblBatt10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.lblBatt10.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBatt10.Location = new System.Drawing.Point(500, 451);
+            this.lblBatt10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBatt10.Location = new System.Drawing.Point(470, 451);
             this.lblBatt10.Name = "lblBatt10";
-            this.lblBatt10.Size = new System.Drawing.Size(23, 25);
+            this.lblBatt10.Size = new System.Drawing.Size(17, 18);
             this.lblBatt10.TabIndex = 12;
             this.lblBatt10.Text = "0";
             this.lblBatt10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -662,10 +675,10 @@
             // 
             this.lblBatt9.AutoSize = true;
             this.lblBatt9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.lblBatt9.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBatt9.Location = new System.Drawing.Point(398, 451);
+            this.lblBatt9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBatt9.Location = new System.Drawing.Point(368, 451);
             this.lblBatt9.Name = "lblBatt9";
-            this.lblBatt9.Size = new System.Drawing.Size(23, 25);
+            this.lblBatt9.Size = new System.Drawing.Size(17, 18);
             this.lblBatt9.TabIndex = 11;
             this.lblBatt9.Text = "0";
             this.lblBatt9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -674,10 +687,10 @@
             // 
             this.lblBatt7.AutoSize = true;
             this.lblBatt7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.lblBatt7.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBatt7.Location = new System.Drawing.Point(192, 451);
+            this.lblBatt7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBatt7.Location = new System.Drawing.Point(162, 451);
             this.lblBatt7.Name = "lblBatt7";
-            this.lblBatt7.Size = new System.Drawing.Size(23, 25);
+            this.lblBatt7.Size = new System.Drawing.Size(17, 18);
             this.lblBatt7.TabIndex = 10;
             this.lblBatt7.Text = "0";
             this.lblBatt7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -686,10 +699,10 @@
             // 
             this.lblBatt8.AutoSize = true;
             this.lblBatt8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.lblBatt8.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBatt8.Location = new System.Drawing.Point(297, 451);
+            this.lblBatt8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBatt8.Location = new System.Drawing.Point(267, 451);
             this.lblBatt8.Name = "lblBatt8";
-            this.lblBatt8.Size = new System.Drawing.Size(23, 25);
+            this.lblBatt8.Size = new System.Drawing.Size(17, 18);
             this.lblBatt8.TabIndex = 9;
             this.lblBatt8.Text = "0";
             this.lblBatt8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -698,10 +711,10 @@
             // 
             this.lblBatt6.AutoSize = true;
             this.lblBatt6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.lblBatt6.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBatt6.Location = new System.Drawing.Point(90, 451);
+            this.lblBatt6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBatt6.Location = new System.Drawing.Point(60, 451);
             this.lblBatt6.Name = "lblBatt6";
-            this.lblBatt6.Size = new System.Drawing.Size(23, 25);
+            this.lblBatt6.Size = new System.Drawing.Size(17, 18);
             this.lblBatt6.TabIndex = 8;
             this.lblBatt6.Text = "0";
             this.lblBatt6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -710,10 +723,10 @@
             // 
             this.lblBatt5.AutoSize = true;
             this.lblBatt5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.lblBatt5.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBatt5.Location = new System.Drawing.Point(498, 245);
+            this.lblBatt5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBatt5.Location = new System.Drawing.Point(468, 245);
             this.lblBatt5.Name = "lblBatt5";
-            this.lblBatt5.Size = new System.Drawing.Size(23, 25);
+            this.lblBatt5.Size = new System.Drawing.Size(17, 18);
             this.lblBatt5.TabIndex = 7;
             this.lblBatt5.Text = "0";
             this.lblBatt5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -722,10 +735,10 @@
             // 
             this.lblBatt4.AutoSize = true;
             this.lblBatt4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.lblBatt4.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBatt4.Location = new System.Drawing.Point(396, 245);
+            this.lblBatt4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBatt4.Location = new System.Drawing.Point(366, 245);
             this.lblBatt4.Name = "lblBatt4";
-            this.lblBatt4.Size = new System.Drawing.Size(23, 25);
+            this.lblBatt4.Size = new System.Drawing.Size(17, 18);
             this.lblBatt4.TabIndex = 6;
             this.lblBatt4.Text = "0";
             this.lblBatt4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -734,10 +747,10 @@
             // 
             this.lblBatt2.AutoSize = true;
             this.lblBatt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.lblBatt2.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBatt2.Location = new System.Drawing.Point(190, 245);
+            this.lblBatt2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBatt2.Location = new System.Drawing.Point(165, 245);
             this.lblBatt2.Name = "lblBatt2";
-            this.lblBatt2.Size = new System.Drawing.Size(23, 25);
+            this.lblBatt2.Size = new System.Drawing.Size(17, 18);
             this.lblBatt2.TabIndex = 5;
             this.lblBatt2.Text = "0";
             this.lblBatt2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -746,10 +759,10 @@
             // 
             this.lblBatt3.AutoSize = true;
             this.lblBatt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.lblBatt3.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBatt3.Location = new System.Drawing.Point(295, 245);
+            this.lblBatt3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBatt3.Location = new System.Drawing.Point(265, 245);
             this.lblBatt3.Name = "lblBatt3";
-            this.lblBatt3.Size = new System.Drawing.Size(23, 25);
+            this.lblBatt3.Size = new System.Drawing.Size(17, 18);
             this.lblBatt3.TabIndex = 4;
             this.lblBatt3.Text = "0";
             this.lblBatt3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -797,7 +810,7 @@
             this.btnSetClock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSetClock.FlatAppearance.BorderSize = 0;
             this.btnSetClock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetClock.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetClock.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetClock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSetClock.Location = new System.Drawing.Point(441, 600);
             this.btnSetClock.Name = "btnSetClock";
@@ -806,19 +819,6 @@
             this.btnSetClock.Text = "Set clock";
             this.btnSetClock.UseVisualStyleBackColor = true;
             this.btnSetClock.Click += new System.EventHandler(this.btnSetClock_Click);
-            // 
-            // lblDeltaVolt
-            // 
-            this.lblDeltaVolt.AutoSize = true;
-            this.lblDeltaVolt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.lblDeltaVolt.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeltaVolt.Location = new System.Drawing.Point(335, 35);
-            this.lblDeltaVolt.Name = "lblDeltaVolt";
-            this.lblDeltaVolt.Size = new System.Drawing.Size(193, 28);
-            this.lblDeltaVolt.TabIndex = 59;
-            this.lblDeltaVolt.Text = "Delta Voltage: 0 V";
-            this.lblDeltaVolt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDeltaVolt.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // NewDesign
             // 
