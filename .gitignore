@@ -56,3 +56,6 @@ dkms.conf
 *.cache
 #SwReadoutToolExample/obj/Debug/
 Debug/
+SwReadoutToolExample/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+SwReadoutToolExample/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+SwReadoutToolExample/obj/Debug/SwReadoutToolVeriaLab.csprojAssemblyReference.cache
