@@ -382,5 +382,10 @@ namespace SwReadoutToolExample
 
             return String.Format("{0}, {1}%, {2}%, {3}%", modeTxt, data[1], data[2], data[3]);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

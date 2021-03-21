@@ -79,7 +79,7 @@
             this.gbRegisters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbRegisters.Location = new System.Drawing.Point(17, 37);
             this.gbRegisters.Name = "gbRegisters";
-            this.gbRegisters.Size = new System.Drawing.Size(519, 476);
+            this.gbRegisters.Size = new System.Drawing.Size(519, 379);
             this.gbRegisters.TabIndex = 2;
             this.gbRegisters.TabStop = false;
             this.gbRegisters.Text = "Registers";
@@ -94,14 +94,14 @@
             this.txtRegisterOutput.Multiline = true;
             this.txtRegisterOutput.Name = "txtRegisterOutput";
             this.txtRegisterOutput.ReadOnly = true;
-            this.txtRegisterOutput.Size = new System.Drawing.Size(507, 416);
+            this.txtRegisterOutput.Size = new System.Drawing.Size(507, 319);
             this.txtRegisterOutput.TabIndex = 3;
             // 
             // btnReadRegisters
             // 
             this.btnReadRegisters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReadRegisters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReadRegisters.Location = new System.Drawing.Point(438, 447);
+            this.btnReadRegisters.Location = new System.Drawing.Point(438, 350);
             this.btnReadRegisters.Name = "btnReadRegisters";
             this.btnReadRegisters.Size = new System.Drawing.Size(75, 23);
             this.btnReadRegisters.TabIndex = 2;
@@ -116,7 +116,7 @@
             this.gbLogging.Controls.Add(this.btnReadLogging);
             this.gbLogging.Enabled = false;
             this.gbLogging.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbLogging.Location = new System.Drawing.Point(17, 519);
+            this.gbLogging.Location = new System.Drawing.Point(17, 422);
             this.gbLogging.Name = "gbLogging";
             this.gbLogging.Size = new System.Drawing.Size(169, 73);
             this.gbLogging.TabIndex = 3;
@@ -152,7 +152,7 @@
             this.gbClock.Controls.Add(this.btnReadClock);
             this.gbClock.Enabled = false;
             this.gbClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbClock.Location = new System.Drawing.Point(192, 520);
+            this.gbClock.Location = new System.Drawing.Point(192, 423);
             this.gbClock.Name = "gbClock";
             this.gbClock.Size = new System.Drawing.Size(169, 73);
             this.gbClock.TabIndex = 4;
@@ -188,7 +188,7 @@
             this.gbBattery.Controls.Add(this.btn85proc);
             this.gbBattery.Enabled = false;
             this.gbBattery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBattery.Location = new System.Drawing.Point(367, 520);
+            this.gbBattery.Location = new System.Drawing.Point(367, 423);
             this.gbBattery.Name = "gbBattery";
             this.gbBattery.Size = new System.Drawing.Size(169, 73);
             this.gbBattery.TabIndex = 5;
@@ -221,7 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 605);
+            this.ClientSize = new System.Drawing.Size(896, 508);
             this.Controls.Add(this.gbBattery);
             this.Controls.Add(this.gbClock);
             this.Controls.Add(this.gbLogging);
@@ -232,6 +232,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "BBMS Readout Tool Veria Onderhoud";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.gbRegisters.ResumeLayout(false);
             this.gbRegisters.PerformLayout();
