@@ -273,7 +273,8 @@ namespace VeldiaReadout
             //FTAT 
             UInt16 fullChargeCapacity1;
             canSbsDevice.ReadSBSRegister(SBSRegisters.FullChargeCapacity, out fullChargeCapacity1);
-            lblFullChargeC.Text = String.Format("{0} Wh ", Math.Round((Double)fullChargeCapacity1 / 1000 * 36));
+            //lblFullChargeC.Text = String.Format("{0} Wh ", Math.Round((Double)fullChargeCapacity1 / 1000 * 36));
+            lblChargeCap.Text = String.Format("{0} Wh ", Math.Round((Double)fullChargeCapacity1 / 1000 * 36));
             // END
 
             //FTAT 
@@ -327,7 +328,7 @@ namespace VeldiaReadout
             //Negative value is discharging
             UInt16 actualCurrent;
             canSbsDevice.ReadSBSRegister(SBSRegisters.Current, out actualCurrent);
-            lblDeltaV.Text = String.Format("Actual current: {0:0.00}A", (Double)((Int16)actualCurrent) / 1000.0);
+            // lblDeltaV.Text = String.Format("Actual current: {0:0.00}A", (Double)((Int16)actualCurrent) / 1000.0);
 
             //Read the cell voltages
             //First read the number of cells in the pack
@@ -335,7 +336,7 @@ namespace VeldiaReadout
             canSbsDevice.ReadSBSRegister(SBSRegisters.CellNumber, out nrCells);
 
             UInt16 high = 0;
-            UInt16 low = 0;
+            UInt16 low = 4200;
 
             for (UInt16 idx = 0; idx < nrCells; idx++)
             {
@@ -348,9 +349,9 @@ namespace VeldiaReadout
 
                 string l = "lblBatt" + (idx + 1);
 
-                Label lbl_text = this.Controls.Find(l, true).FirstOrDefault() as Label;
+               Label lbl_text = this.Controls.Find(l, true).FirstOrDefault() as Label;
 
-                lbl_text.Text = String.Format("{1:0.000}V", (Double)cellVoltage / 1000.0);
+                lbl_text.Text = String.Format("[{0}] {1:0.000}V", idx + 1,  (Double)cellVoltage / 1000.0);
 
                 if (cellVoltage > high)
                 {
@@ -358,7 +359,7 @@ namespace VeldiaReadout
                 }
                 else
                 {
-                    if (cellVoltage == 0) { low = cellVoltage; }
+                   // if (cellVoltage == 0) { low = cellVoltage; }
 
                     if (cellVoltage < low)
                     {
@@ -366,8 +367,9 @@ namespace VeldiaReadout
                     }
                 }
             }
-
-            lblDeltaVolt.Text = String.Format("{1:0.000}V", (high - low) / 1000.0);
+              //  lblDeltaV.Text = String.Format("Actual delta: {0:0.00}A", (Double)((Int16)actualCurrent) / 1000.0);
+            //lblDeltaVolt.Text = String.Format("{1:0.000}V", (high - low) / 1000.0);
+            lblDeltaV.Text = String.Format("Delta Voltage {1:0.000}V",1,  (high - low) / 1000.0);
 
             //Read the temperature values
             //First read the number of thermistors in the pack
@@ -386,7 +388,8 @@ namespace VeldiaReadout
 
                 Label lbl_text = this.Controls.Find(l, true).FirstOrDefault() as Label;
 
-                lbl_text.Text = String.Format("{1:0.00}°C", ((Double)tempSensor / 10.0) - 273.15);
+               // lbl_text.Text = String.Format("{1:0.00}°C", ((Double)tempSensor / 10.0) - 273.15);
+               lbl_text.Text = String.Format(" {1:0.00}°C", idx , ((Double)tempSensor / 10.0) - 273.15);
             }
 
             Byte[] chargCtrl;
