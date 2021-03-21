@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#  folder
+0files
+*.cache
+#SwReadoutToolExample/obj/Debug/
+Debug/
